@@ -1,5 +1,8 @@
 ODD-BLOBS = One Dimensional Data - Boolean Logic Binning System
- 
+Credit: 
+* conceptualized by Marc Green and Sarah Sabatinos [published in Sabatinos, S. A., & Green, M. D. (2018). A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast. In Genome Instability (pp. 509-526)]
+* translated from VBA and written in R by Kazeera Aliar
+
 The replication fork is a structure that is formed by DNA helicase during DNA replication between the areas of "unreplicated" and replicated DNA.
 Fork initiation, structure, and progression has been inferred by genetic and molecular methods such as DNA combing, chip-ChIP,  and sequencing, but there is a critical gap in knowledge as to what the fork actually looks like.
  
@@ -71,13 +74,6 @@ Output:
  
  
 Update log:
-oddblobs5 - differentiates between data files with protein data and those without using a flag "prot_exists"
-oddblobs6, functions4 (Nov 6, 2020) - added annotations, removed unnecessary code
- 
- 
-Credit: 
-conceptualized by Marc Green and Sarah Sabatinos
-written in R by Kazeera Aliar
- 
- 
-ReadMe last updated: Nov 06, 2020 by Kazeera Aliar
+* oddblobs5 - differentiates between data files with protein data and those without using a flag "prot_exists"
+& oddblobs6, functions4 (Nov 6, 2020) - added annotations, removed unnecessary code
+
