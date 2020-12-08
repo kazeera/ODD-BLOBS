@@ -26,7 +26,7 @@ A) oddblobs_.R located in scripts/r is the main script used to:
 * define forks at start and end of tracts
 * find location of proteins
 
-B) functions3_Copy.R located in scripts/r contain functions that process and reformat data
+B) functions_.R located in scripts/r contain functions that process and reformat data
 
 
 Input: 
