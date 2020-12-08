@@ -1,7 +1,12 @@
 ODD-BLOBS = One Dimensional Data - Boolean Logic Binning System
 
+The replication fork is a structure that is formed by DNA helicase during replication between the areas of unreplicated and replicated DNA.
+Fork initiation, structure, and progression has been inferred by genetic and molecular methods such as DNA combing, chip-ChIP,  and sequencing, but there is a critical gap in knowledge as to what the fork actually looks like.
 
-Purpose:
+Replication protein co-localization can be used to model fork structures and dissociation. 
+
+
+Purpose of this tool:
 ODD-BLOBS models DNA replication using quantitative chromatin fiber data.
 It first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions
 It then checks for protein localization and co-localization along the fiber as well as in these regions.
