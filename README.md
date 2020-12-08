@@ -1,6 +1,6 @@
 ODD-BLOBS = One Dimensional Data - Boolean Logic Binning System  
   
-Credit: 
+Credits: 
 * conceptualized by Dr. Sarah Sabatinos and Marc Green [published in Sabatinos, S. A., & Green, M. D. (2018). A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast. In Genome Instability (pp. 509-526)]
 * translated from VBA and written in R by Kazeera Aliar
   
