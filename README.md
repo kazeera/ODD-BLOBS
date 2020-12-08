@@ -1,25 +1,24 @@
 ODD-BLOBS = One Dimensional Data - Boolean Logic Binning System
+  
 Credit: 
 * conceptualized by Marc Green and Sarah Sabatinos [published in Sabatinos, S. A., & Green, M. D. (2018). A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast. In Genome Instability (pp. 509-526)]
 * translated from VBA and written in R by Kazeera Aliar
-
+  
 The replication fork is a structure that is formed by DNA helicase during DNA replication between the areas of "unreplicated" and replicated DNA.
 Fork initiation, structure, and progression has been inferred by genetic and molecular methods such as DNA combing, chip-ChIP,  and sequencing, but there is a critical gap in knowledge as to what the fork actually looks like.
- 
+  
 Replication protein co-localization can be used to model fork structures and dissociation. 
- 
- 
-Purpose of this tool:
+  
+  
+Purpose of this tool:\n
   ODD-BLOBS models DNA replication using quantitative chromatin fiber data.
-   It first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions
-   It then checks for protein localization and co-localization along the fiber as well as in these regions.
- 
- 
+    It first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions.
+    It then checks for protein localization and co-localization along the fiber as well as in these regions.
+   
 Dependencies (R statistical environment): 
   R >= 3.4.4 (Mar 2018)
   jsonlite > 1.5.9
- 
- 
+   
 Files:
 A) oddblobs_.R located in scripts/r is the main script used to:
 * read in fiber data and user-defined arguments (thresholds, etc.)
