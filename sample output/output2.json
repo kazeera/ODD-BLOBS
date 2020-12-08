@@ -1,0 +1,26 @@
+[
+  {
+    "Size": 466,
+    "Prot1Percents": 44.4444,
+    "Prot2Percents": 46.8208,
+    "_row": "Tracts"
+  },
+  {
+    "Size": 243,
+    "Prot1Percents": 17.7778,
+    "Prot2Percents": 12.7168,
+    "_row": "Forks"
+  },
+  {
+    "Size": 1231,
+    "Prot1Percents": 34.4444,
+    "Prot2Percents": 38.1503,
+    "_row": "Unreplicated"
+  },
+  {
+    "Size": 1940,
+    "Prot1Percents": 100,
+    "Prot2Percents": 100,
+    "_row": "Total"
+  }
+]

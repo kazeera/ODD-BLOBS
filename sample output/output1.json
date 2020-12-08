@@ -1,0 +1,1696 @@
+[
+  {
+    "Region": "Unreplicated",
+    "Start": 1,
+    "End": 10,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 11,
+    "End": 12,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 13,
+    "End": 13,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 14,
+    "End": 15,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 16,
+    "End": 52,
+    "Protein1": "[ 43 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 53,
+    "End": 54,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 55,
+    "End": 56,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 57,
+    "End": 58,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 59,
+    "End": 78,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 79,
+    "End": 80,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 81,
+    "End": 85,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 86,
+    "End": 87,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 88,
+    "End": 89,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 90,
+    "End": 91,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 92,
+    "End": 95,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 96,
+    "End": 97,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 98,
+    "End": 99,
+    "Protein1": "[ 98 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 100,
+    "End": 111,
+    "Protein1": "[  ]",
+    "Protein2": "[ 101,102,103,104,110,111 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 112,
+    "End": 113,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 114,
+    "End": 121,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 122,
+    "End": 122,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 123,
+    "End": 150,
+    "Protein1": "[  ]",
+    "Protein2": "[ 146,147,148,149 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 151,
+    "End": 152,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 153,
+    "End": 153,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 154,
+    "End": 154,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 155,
+    "End": 156,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 157,
+    "End": 162,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 163,
+    "End": 164,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 165,
+    "End": 190,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 191,
+    "End": 192,
+    "Protein1": "[  ]",
+    "Protein2": "[ 191,192 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 193,
+    "End": 194,
+    "Protein1": "[  ]",
+    "Protein2": "[ 193 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 195,
+    "End": 196,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 197,
+    "End": 368,
+    "Protein1": "[  ]",
+    "Protein2": "[ 234,235,358 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 369,
+    "End": 371,
+    "Protein1": "[ 371 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 372,
+    "End": 372,
+    "Protein1": "[ 372 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 373,
+    "End": 400,
+    "Protein1": "[ 377,396 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 401,
+    "End": 402,
+    "Protein1": "[  ]",
+    "Protein2": "[ 401 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 403,
+    "End": 403,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 404,
+    "End": 405,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 406,
+    "End": 415,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 416,
+    "End": 417,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 418,
+    "End": 419,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 420,
+    "End": 421,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 422,
+    "End": 443,
+    "Protein1": "[ 427,428,434 ]",
+    "Protein2": "[ 441,442,443 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 444,
+    "End": 445,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 446,
+    "End": 449,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 450,
+    "End": 451,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 452,
+    "End": 465,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 466,
+    "End": 467,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 468,
+    "End": 472,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 473,
+    "End": 474,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 475,
+    "End": 476,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 477,
+    "End": 478,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 479,
+    "End": 479,
+    "Protein1": "[  ]",
+    "Protein2": "[ 479 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 480,
+    "End": 481,
+    "Protein1": "[  ]",
+    "Protein2": "[ 480,481 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 482,
+    "End": 532,
+    "Protein1": "[  ]",
+    "Protein2": "[ 510,511,512 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 533,
+    "End": 535,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 536,
+    "End": 536,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 537,
+    "End": 573,
+    "Protein1": "[ 540,551 ]",
+    "Protein2": "[ 538,539,540,541 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 574,
+    "End": 576,
+    "Protein1": "[ 576 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 577,
+    "End": 577,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 578,
+    "End": 579,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 580,
+    "End": 582,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 583,
+    "End": 583,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 584,
+    "End": 586,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 587,
+    "End": 588,
+    "Protein1": "[  ]",
+    "Protein2": "[ 588 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 589,
+    "End": 594,
+    "Protein1": "[  ]",
+    "Protein2": "[ 592,593,594 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 595,
+    "End": 596,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 597,
+    "End": 601,
+    "Protein1": "[  ]",
+    "Protein2": "[ 598 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 602,
+    "End": 603,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 604,
+    "End": 604,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 605,
+    "End": 606,
+    "Protein1": "[  ]",
+    "Protein2": "[ 606 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 607,
+    "End": 607,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 608,
+    "End": 609,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 610,
+    "End": 620,
+    "Protein1": "[  ]",
+    "Protein2": "[ 615,616,617 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 621,
+    "End": 622,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 623,
+    "End": 623,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 624,
+    "End": 624,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 625,
+    "End": 635,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 636,
+    "End": 637,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 638,
+    "End": 642,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 643,
+    "End": 644,
+    "Protein1": "[ 643 ]",
+    "Protein2": "[ 644 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 645,
+    "End": 656,
+    "Protein1": "[  ]",
+    "Protein2": "[ 645 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 657,
+    "End": 658,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 659,
+    "End": 673,
+    "Protein1": "[  ]",
+    "Protein2": "[ 662,663,669 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 674,
+    "End": 675,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 676,
+    "End": 681,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 682,
+    "End": 683,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 684,
+    "End": 688,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 689,
+    "End": 690,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 691,
+    "End": 694,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 695,
+    "End": 696,
+    "Protein1": "[ 696 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 697,
+    "End": 703,
+    "Protein1": "[ 697 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 704,
+    "End": 705,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 706,
+    "End": 707,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 708,
+    "End": 716,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 717,
+    "End": 718,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 719,
+    "End": 724,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 725,
+    "End": 726,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 727,
+    "End": 732,
+    "Protein1": "[  ]",
+    "Protein2": "[ 728,729,730 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 733,
+    "End": 734,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 735,
+    "End": 748,
+    "Protein1": "[  ]",
+    "Protein2": "[ 741,742 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 749,
+    "End": 749,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 750,
+    "End": 754,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 755,
+    "End": 757,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 758,
+    "End": 758,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 759,
+    "End": 819,
+    "Protein1": "[ 801,806,809,810,811 ]",
+    "Protein2": "[ 794,795 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 820,
+    "End": 821,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 822,
+    "End": 839,
+    "Protein1": "[ 833,834 ]",
+    "Protein2": "[ 833,834,835 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 840,
+    "End": 841,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 842,
+    "End": 848,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 849,
+    "End": 850,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 851,
+    "End": 892,
+    "Protein1": "[ 853,854,864,865,873,874,875,876,878,879,885,886,887,888,889,892 ]",
+    "Protein2": "[ 862,863,864,873,874 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 893,
+    "End": 893,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 894,
+    "End": 895,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 896,
+    "End": 910,
+    "Protein1": "[ 901,902 ]",
+    "Protein2": "[ 901 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 911,
+    "End": 912,
+    "Protein1": "[ 911 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 913,
+    "End": 914,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 915,
+    "End": 931,
+    "Protein1": "[ 916,917,918,919,920 ]",
+    "Protein2": "[ 927,928,929 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 932,
+    "End": 932,
+    "Protein1": "[ 932 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 933,
+    "End": 934,
+    "Protein1": "[ 933 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 935,
+    "End": 945,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 946,
+    "End": 946,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 947,
+    "End": 948,
+    "Protein1": "[ 947,948 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 949,
+    "End": 960,
+    "Protein1": "[ 949,954,955,956,958 ]",
+    "Protein2": "[ 957,958,959 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 961,
+    "End": 962,
+    "Protein1": "[ 962 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 963,
+    "End": 966,
+    "Protein1": "[ 963,964,965,966 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 967,
+    "End": 968,
+    "Protein1": "[ 967,968 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 969,
+    "End": 977,
+    "Protein1": "[ 972,973,974,975 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 978,
+    "End": 979,
+    "Protein1": "[ 979 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 980,
+    "End": 997,
+    "Protein1": "[ 984,985,986,993,994 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 998,
+    "End": 999,
+    "Protein1": "[ 999 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1000,
+    "End": 1000,
+    "Protein1": "[ 1000 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1001,
+    "End": 1002,
+    "Protein1": "[ 1001,1002 ]",
+    "Protein2": "[ 1001,1002 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1003,
+    "End": 1004,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1005,
+    "End": 1005,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1006,
+    "End": 1007,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1006,1007 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1008,
+    "End": 1014,
+    "Protein1": "[ 1009,1010,1011,1012,1013,1014 ]",
+    "Protein2": "[ 1012 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1015,
+    "End": 1016,
+    "Protein1": "[ 1015 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1017,
+    "End": 1023,
+    "Protein1": "[ 1022 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1024,
+    "End": 1025,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1026,
+    "End": 1033,
+    "Protein1": "[ 1029,1030,1031 ]",
+    "Protein2": "[ 1028,1029,1030 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1034,
+    "End": 1034,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1035,
+    "End": 1036,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1037,
+    "End": 1047,
+    "Protein1": "[ 1039,1040,1041,1046,1047 ]",
+    "Protein2": "[ 1041,1042,1043 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1048,
+    "End": 1049,
+    "Protein1": "[ 1048,1049 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1050,
+    "End": 1088,
+    "Protein1": "[ 1052,1053,1054,1055,1057,1065,1066,1073,1074,1081,1082,1083,1084,1085 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1089,
+    "End": 1090,
+    "Protein1": "[ 1090 ]",
+    "Protein2": "[ 1090 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1091,
+    "End": 1091,
+    "Protein1": "[ 1091 ]",
+    "Protein2": "[ 1091 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1092,
+    "End": 1093,
+    "Protein1": "[ 1092 ]",
+    "Protein2": "[ 1092,1093 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1094,
+    "End": 1097,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1094 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1098,
+    "End": 1099,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1100,
+    "End": 1101,
+    "Protein1": "[ 1101 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1102,
+    "End": 1103,
+    "Protein1": "[ 1102,1103 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1104,
+    "End": 1121,
+    "Protein1": "[ 1107,1108,1109 ]",
+    "Protein2": "[ 1110,1111 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1122,
+    "End": 1123,
+    "Protein1": "[ 1123 ]",
+    "Protein2": "[ 1122 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1124,
+    "End": 1124,
+    "Protein1": "[ 1124 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1125,
+    "End": 1126,
+    "Protein1": "[ 1125,1126 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1127,
+    "End": 1135,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1131 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1136,
+    "End": 1137,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1138,
+    "End": 1141,
+    "Protein1": "[ 1139,1140,1141 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1142,
+    "End": 1143,
+    "Protein1": "[ 1142 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1144,
+    "End": 1153,
+    "Protein1": "[ 1145,1146,1147,1153 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1154,
+    "End": 1155,
+    "Protein1": "[ 1154,1155 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1156,
+    "End": 1160,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1160 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1161,
+    "End": 1162,
+    "Protein1": "[ 1161,1162 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1163,
+    "End": 1191,
+    "Protein1": "[ 1184,1185 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1192,
+    "End": 1193,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1194,
+    "End": 1200,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1201,
+    "End": 1202,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1203,
+    "End": 1207,
+    "Protein1": "[ 1206,1207 ]",
+    "Protein2": "[ 1206,1207 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1208,
+    "End": 1209,
+    "Protein1": "[ 1208,1209 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1210,
+    "End": 1222,
+    "Protein1": "[ 1210,1211,1218,1219,1220,1222 ]",
+    "Protein2": "[ 1214,1215,1216 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1223,
+    "End": 1224,
+    "Protein1": "[ 1223,1224 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1225,
+    "End": 1231,
+    "Protein1": "[ 1225,1230,1231 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1232,
+    "End": 1233,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1234,
+    "End": 1267,
+    "Protein1": "[ 1235,1236,1248,1249,1264,1265 ]",
+    "Protein2": "[ 1241,1242,1246,1247,1248,1249,1250,1254,1255,1256,1266,1267 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1268,
+    "End": 1269,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1268 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1270,
+    "End": 1270,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1271,
+    "End": 1272,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1273,
+    "End": 1289,
+    "Protein1": "[ 1282,1283,1284,1289 ]",
+    "Protein2": "[ 1288,1289 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1290,
+    "End": 1291,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1292,
+    "End": 1297,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1298,
+    "End": 1299,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1300,
+    "End": 1304,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1305,
+    "End": 1306,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1307,
+    "End": 1307,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1308,
+    "End": 1309,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1310,
+    "End": 1335,
+    "Protein1": "[ 1316,1317,1323 ]",
+    "Protein2": "[ 1313,1331,1332 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1336,
+    "End": 1337,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1338,
+    "End": 1338,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1339,
+    "End": 1340,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1341,
+    "End": 1341,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1342,
+    "End": 1343,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1344,
+    "End": 1347,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1348,
+    "End": 1349,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1350,
+    "End": 1361,
+    "Protein1": "[ 1355,1357,1358 ]",
+    "Protein2": "[ 1351,1352,1353 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1362,
+    "End": 1363,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1364,
+    "End": 1373,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1374,
+    "End": 1375,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1376,
+    "End": 1376,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1377,
+    "End": 1378,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1377,1378 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1379,
+    "End": 1381,
+    "Protein1": "[ 1379 ]",
+    "Protein2": "[ 1379 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1382,
+    "End": 1383,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1384,
+    "End": 1401,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1386,1387,1388,1389,1394,1395,1396 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1402,
+    "End": 1403,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1404,
+    "End": 1408,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1409,
+    "End": 1409,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1410,
+    "End": 1411,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1412,
+    "End": 1417,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1416,1417 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1418,
+    "End": 1419,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1418 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1420,
+    "End": 1422,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1423,
+    "End": 1424,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1425,
+    "End": 1439,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1440,
+    "End": 1441,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1440,1441 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1442,
+    "End": 1634,
+    "Protein1": "[ 1474,1504,1505,1514,1601 ]",
+    "Protein2": "[ 1470,1471,1472,1505,1514,1515,1519,1564,1565,1602,1603,1611,1612 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1635,
+    "End": 1636,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1635,1636 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1637,
+    "End": 1638,
+    "Protein1": "[ 1637,1638 ]",
+    "Protein2": "[ 1637,1638 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1639,
+    "End": 1640,
+    "Protein1": "[ 1639 ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1641,
+    "End": 1649,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1647 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1650,
+    "End": 1651,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1652,
+    "End": 1669,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1661,1662,1663 ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1670,
+    "End": 1671,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1672,
+    "End": 1673,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1674,
+    "End": 1679,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1680,
+    "End": 1681,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1682,
+    "End": 1729,
+    "Protein1": "[ 1683 ]",
+    "Protein2": "[ 1687,1688,1689,1726,1727,1728 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1730,
+    "End": 1731,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1732,
+    "End": 1732,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1733,
+    "End": 1734,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1735,
+    "End": 1745,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1737,1744 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1746,
+    "End": 1748,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1749,
+    "End": 1749,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1750,
+    "End": 1802,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1788,1789,1790 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1803,
+    "End": 1804,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1803 ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1805,
+    "End": 1806,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1807,
+    "End": 1808,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1808 ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1809,
+    "End": 1882,
+    "Protein1": "[ 1813,1814,1859,1860 ]",
+    "Protein2": "[ 1814,1828,1841,1842,1843,1844,1879,1880,1881,1882 ]"
+  },
+  {
+    "Region": "ForkOpen",
+    "Start": 1883,
+    "End": 1884,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Replicated",
+    "Start": 1885,
+    "End": 1886,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "ForkClose",
+    "Start": 1887,
+    "End": 1888,
+    "Protein1": "[  ]",
+    "Protein2": "[  ]"
+  },
+  {
+    "Region": "Unreplicated",
+    "Start": 1889,
+    "End": 1940,
+    "Protein1": "[  ]",
+    "Protein2": "[ 1940 ]"
+  }
+]
