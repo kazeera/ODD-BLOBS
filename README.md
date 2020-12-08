@@ -74,4 +74,3 @@ Output:
 Update log:<br /> 
 * oddblobs5 - differentiates between data files with protein data and those without using a flag "prot_exists"<br /> 
 * oddblobs6, functions4 (Nov 6, 2020) - added annotations, removed unnecessary code<br /> 
-https://htmlpreview.github.io/?https://github.com/kazeera/ODD-BLOBS/blob/master/ODDBLOBS_Visual_Description.html
