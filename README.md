@@ -1,5 +1,5 @@
 # ODD-BLOBS
-### (One Dimensional Data - Boolean Logic Binning System  )
+### (One Dimensional Data - Boolean Logic Binning System)
     
 In biology, the replication fork is a structure that is formed by DNA helicase during DNA replication between the areas of "unreplicated" and replicated DNA.
 Fork initiation, structure, and progression has been inferred by genetic and molecular methods such as DNA combing, chip-ChIP, and sequencing, but there is a critical gap in knowledge as to what the fork actually looks like.
