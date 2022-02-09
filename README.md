@@ -1,4 +1,5 @@
-# ODD-BLOBS = One Dimensional Data - Boolean Logic Binning System  
+# ODD-BLOBS
+### (One Dimensional Data - Boolean Logic Binning System  )
     
 In biology, the replication fork is a structure that is formed by DNA helicase during DNA replication between the areas of "unreplicated" and replicated DNA.
 Fork initiation, structure, and progression has been inferred by genetic and molecular methods such as DNA combing, chip-ChIP, and sequencing, but there is a critical gap in knowledge as to what the fork actually looks like.
@@ -15,27 +16,28 @@ The localization of proteins, such as Replication Protein A (RPA) and Histone H2
 * ODD-BLOBS first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions.
 * It then checks for protein localization and co-localization along the fiber as well as in these regions.
    
-## Dependencies (R statistical environment): 
+### Dependencies (R statistical environment): 
 * R >= 3.4.4 (Mar 2018)
 * jsonlite > 1.5.9
    
 ## Files:
-A) oddblobs_.R located in scripts/r is the main script used to:
+#### A) oddblobs_.R 
+located in scripts/r is the main script used to:
 * read in fiber data and user-defined arguments (thresholds, etc.)
 * threshold intensity arrays
 * find location of tracts (areas of replication)
 * define forks at start and end of tracts
 * find location of proteins
  
-B) functions_.R located in scripts/r contain functions that process and reformat data
-  
+#### B) functions_.R 
+located in scripts/r contain functions that process and reformat data  
   
 ## Input: 
-A) fiber data table (.txt)
+#### A) fiber data table (.txt)
 - includes 3 main color channels of pixel intensities (BrdU for replication and 2 proteins)
 - each channel is an array, 1 x n pixels, where n is the length of the fiber (and number of rows)
  
-B) 8 command-line arguments:
+#### B) 8 command-line arguments:
 1) experiment name
 2) file name
 3) tract threshold - channel 2 values higher than this value will be considered "replicated"
@@ -47,31 +49,31 @@ B) 8 command-line arguments:
  
  
 ## Output:
-#### 1) table1.json = positions of all regions in sequential order along the fiber trace<br /> 
-               - one object {} is one region (either forkOpen, replication, forkClose, unreplicated)<br /> 
-               - one index each for start and end<br /> 
-               - array indices for locations of protein 1 and 2<br /> 
-               - e.g. of one object:<br /> 
-                {<br /> 
-                    "Region": "Replicated",<br /> 
-                    "Start": 100,<br /> 
-                    "End": 111,<br /> 
-                    "Protein1": "[  ]",<br /> 
-                    "Protein2": "[ 101,102,103,104,110,111 ]"<br /> 
-                },<br /> 
+#### 1) table1.json = positions of all regions in sequential order along the fiber trace 
+               - one object {} is one region (either forkOpen, replication, forkClose, unreplicated)
+               - one index each for start and end
+               - array indices for locations of protein 1 and 2
+               - e.g. of one object: 
+                {
+                    "Region": "Replicated",
+                    "Start": 100,
+                    "End": 111,
+                    "Protein1": "[  ]", 
+                    "Protein2": "[ 101,102,103,104,110,111 ]"
+                },
  
-#### 2) table2.json = summarizes percent of protein amount across regions (percents add up to a 100)<br /> 
-               - one object is one region (either fork, replicated unreplicated)<br /> 
-               - total size in pixels, percents of protein 1 and protein 2<br /> 
-               - e.g of one object:<br /> 
-                {<br /> 
-                    "Size": 466,<br /> 
-                    "Prot1Percents": 44.4444,<br /> 
-                    "Prot2Percents": 46.8208,<br /> 
-                    "_row": "Tracts"<br /> 
-                },<br /> 
+#### 2) table2.json = summarizes percent of protein amount across regions (percents add up to a 100)
+               - one object is one region (either fork, replicated unreplicated)
+               - total size in pixels, percents of protein 1 and protein 2
+               - e.g of one object:
+                {
+                    "Size": 466,
+                    "Prot1Percents": 44.4444,
+                    "Prot2Percents": 46.8208,
+                    "_row": "Tracts"
+                },
  
  
-Update log:<br /> 
-* oddblobs5 - differentiates between data files with protein data and those without using a flag "prot_exists"<br /> 
-* oddblobs6, functions4 (Nov 6, 2020) - added annotations, removed unnecessary code<br /> 
+### Update log:
+* oddblobs6, functions4 (latest, Nov 6, 2020) - added annotations, removed unnecessary code<br /> 
+* oddblobs5 - differentiates between data files with protein data and those without using a flag "prot_exists"<br />
