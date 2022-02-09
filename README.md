@@ -8,7 +8,7 @@ The localization of proteins, such as Replication Protein A (RPA) and Histone H2
   <br /> 
   <br /> 
 
-### Credits: 
+### Credits
 * conceptualized by Dr. Sarah Sabatinos and Marc Green [published in Sabatinos, S. A., & Green, M. D. (2018). A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast. In Genome Instability (pp. 509-526)]
 * translated from VBA and written in R by Kazeera Aliar
 
@@ -16,11 +16,11 @@ The localization of proteins, such as Replication Protein A (RPA) and Histone H2
 * ODD-BLOBS first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions.
 * It then checks for protein localization and co-localization along the fiber as well as in these regions.
    
-### Dependencies (R statistical environment): 
+### Dependencies (R statistical environment)
 * R >= 3.4.4 (Mar 2018)
 * jsonlite > 1.5.9
    
-## Files:
+## Files
 #### A) oddblobs_.R 
 located in scripts/r is the main script used to:
 * read in fiber data and user-defined arguments (thresholds, etc.)
@@ -32,7 +32,7 @@ located in scripts/r is the main script used to:
 #### B) functions_.R 
 located in scripts/r contain functions that process and reformat data  
   
-## Input: 
+## Input
 #### A) fiber data table (.txt)
 - includes 3 main color channels of pixel intensities (BrdU for replication and 2 proteins)
 - each channel is an array, 1 x n pixels, where n is the length of the fiber (and number of rows)
@@ -48,7 +48,7 @@ located in scripts/r contain functions that process and reformat data
 8) smooth it - close gaps of less than or equal to this number (pixels) in array x
  
  
-## Output:
+## Output
 #### 1) table1.json = positions of all regions in sequential order along the fiber trace 
                - one object {} is one region (either forkOpen, replication, forkClose, unreplicated)
                - one index each for start and end
