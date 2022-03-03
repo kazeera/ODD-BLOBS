@@ -1,6 +1,6 @@
 # ODD-BLOBS
 ### (One Dimensional Data - Boolean Logic Binning System)
-    
+
 In biology, the replication fork is a structure that is formed by DNA helicase during DNA replication between the areas of "unreplicated" and replicated DNA.
 Fork initiation, structure, and progression has been inferred by genetic and molecular methods such as DNA combing, chip-ChIP, and sequencing, but there is a critical gap in knowledge as to what the fork actually looks like.
   
@@ -77,3 +77,5 @@ located in scripts/r contain functions that process and reformat data
 ### Update log:
 * oddblobs6, functions4 (latest, Nov 6, 2020) - added annotations, removed unnecessary code<br /> 
 * oddblobs5 - differentiates between data files with protein data and those without using a flag "prot_exists"<br />
+
+![](README_visual.pdf?raw=true)
