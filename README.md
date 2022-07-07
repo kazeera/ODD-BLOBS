@@ -6,7 +6,6 @@ Fork initiation, structure, and progression has been inferred by genetic and mol
   
 The localization of proteins, such as Replication Protein A (RPA) and Histone H2A, during replication can be used to model fork structures and dissociation. 
   <br /> 
-  <br /> 
 
 ### Credits
 * conceptualized by Dr. Sarah Sabatinos and Marc Green [published in Sabatinos, S. A., & Green, M. D. (2018). A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast. In Genome Instability (pp. 509-526)]
@@ -15,7 +14,10 @@ The localization of proteins, such as Replication Protein A (RPA) and Histone H2
 ### Purpose: To model DNA replication using quantitative chromatin fiber data.
 * ODD-BLOBS first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions.
 * It then checks for protein localization and co-localization along the fiber as well as in these regions.
-   
+
+<img src="visual description/3_QualitativeToQuantitative.JPG?raw=true" width="500"></img>
+<img src="visual description/8_Application.JPG?raw=true" width="500"></img>
+
 ### Dependencies (R statistical environment)
 * R >= 3.4.4 (Mar 2018)
 * jsonlite > 1.5.9
