@@ -144,11 +144,11 @@ colocalized_prot_array <- as.integer(as.logical(prot1_array2 == ON & prot2_array
 # This table has information about region sizes and counts and pixels of protein in those regions
 table2 <- get_region_sizes(tract_array3)
 
-# Get counts of proteins (number of pixels)
-table2 <- cbind(table2, 
-                Prot1Count = get_prot_counts(prot1_array2, tract_array3),
-                Prot2Count = get_prot_counts(prot2_array2, tract_array3),
-                ColocalizationCount = get_prot_counts(colocalized_prot_array, tract_array3))
+# # Get counts of proteins (number of pixels)
+# table2 <- cbind(table2, 
+#                 Prot1Count = get_prot_counts(prot1_array2, tract_array3),
+#                 Prot2Count = get_prot_counts(prot2_array2, tract_array3),
+#                 ColocalizationCount = get_prot_counts(colocalized_prot_array, tract_array3))
 
 # Get relative percent of proteins across regions
 table2 <- cbind(table2, 
