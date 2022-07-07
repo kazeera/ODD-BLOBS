@@ -16,7 +16,7 @@ The localization of proteins, such as Replication Protein A (RPA) and Histone H2
 * It then checks for protein localization and co-localization along the fiber as well as in these regions.
 
 <img src="visual description/3_Qualitative To Quantitative.JPG?raw=true" width="600"></img>
-
+<img src="visual description/4_ODD-BLOBS_Logic.JPG?raw=true" width="600"></img>
 <img src="visual description/8_Application.JPG?raw=true" width="600"></img>
 
 ### Dependencies (R statistical environment)
@@ -49,7 +49,6 @@ located in scripts/r contain functions that process and reformat data
 6) fork - number of pixels into replicated region (pR)
 7) fork - number of pixels into unreplicated region (pU)
 8) smooth it - close gaps of less than or equal to this number (pixels) in array x
- 
  
 ## Output
 #### 1) table1.json = positions of all regions in sequential order along the fiber trace 
