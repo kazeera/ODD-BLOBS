@@ -15,8 +15,9 @@ The localization of proteins, such as Replication Protein A (RPA) and Histone H2
 * ODD-BLOBS first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions.
 * It then checks for protein localization and co-localization along the fiber as well as in these regions.
 
-<img src="visual description/3_QualitativeToQuantitative.JPG?raw=true" width="500"></img>
-<img src="visual description/8_Application.JPG?raw=true" width="500"></img>
+<img src="visual description/3_Qualitative To Quantitative.JPG?raw=true" width="600"></img>
+
+<img src="visual description/8_Application.JPG?raw=true" width="600"></img>
 
 ### Dependencies (R statistical environment)
 * R >= 3.4.4 (Mar 2018)
