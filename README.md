@@ -1,83 +1,237 @@
-# ODD-BLOBS
-### (One Dimensional Data - Boolean Logic Binning System)
+# R-ODD-BLOBS
+### (One Dimensional Data – Boolean Logic Binning System)
 
-In biology, the replication fork is a structure that is formed by DNA helicase during DNA replication between the areas of "unreplicated" and replicated DNA.
-Fork initiation, structure, and progression has been inferred by genetic and molecular methods such as DNA combing, chip-ChIP, and sequencing, but there is a critical gap in knowledge as to what the fork actually looks like.
-  
-The localization of proteins, such as Replication Protein A (RPA) and Histone H2A, during replication can be used to model fork structures and dissociation. 
-  <br /> 
+ODD-BLOBS is a pipeline for modeling DNA replication structures using quantitative chromatin fiber data.
+During DNA replication, the **replication fork** forms at the boundary between replicated and unreplicated DNA. While fork activity has traditionally been inferred using genetic, molecular, and sequencing approaches, these methods do not directly visualize fork structure along individual chromatin fibers.
+ODD-BLOBS analyzes chromatin fiber intensity data to identify:
 
-### Credits
-* conceptualized by Dr. Sarah Sabatinos and Marc Green [published in Sabatinos, S. A., & Green, M. D. (2018). A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast. In Genome Instability (pp. 509-526)]
-* translated from VBA and written in R by Kazeera Aliar
+- replicated DNA regions  
+- replication forks  
+- unreplicated DNA  
+- protein localization and co-localization along the fiber  
 
-### Purpose: To model DNA replication using quantitative chromatin fiber data.
-* ODD-BLOBS first defines areas of 1) DNA replication and consequently, 2) replication fork and 3) unreplicated regions.
-* It then checks for protein localization and co-localization along the fiber as well as in these regions.
+This enables modeling of replication structures and protein behavior along individual DNA fibers.
 
 <img src="visual description/3_Qualitative To Quantitative.JPG?raw=true" width="600"></img>
 <img src="visual description/4_ODD-BLOBS_Logic.JPG?raw=true" width="600"></img>
 <img src="visual description/8_Application.JPG?raw=true" width="600"></img>
 
-### Dependencies (R statistical environment)
-* R >= 3.4.4 (Mar 2018)
-* jsonlite > 1.5.9
-   
-## Files
-#### A) oddblobs_.R 
-located in scripts/r is the main script used to:
-* read in fiber data and user-defined arguments (thresholds, etc.)
-* threshold intensity arrays
-* find location of tracts (areas of replication)
-* define forks at start and end of tracts
-* find location of proteins
- 
-#### B) functions_.R 
-located in scripts/r contain functions that process and reformat data  
-  
-## Input
-#### A) fiber data table (.txt)
-- includes 3 main color channels of pixel intensities (BrdU for replication and 2 proteins)
-- each channel is an array, 1 x n pixels, where n is the length of the fiber (and number of rows)
- 
-#### B) 8 command-line arguments:
-1) experiment name
-2) file name
-3) tract threshold - channel 2 values higher than this value will be considered "replicated"
-4) protein 1 threshold
-5) protein 2 threshold
-6) fork - number of pixels into replicated region (pR)
-7) fork - number of pixels into unreplicated region (pU)
-8) smooth it - close gaps of less than or equal to this number (pixels) in array x
- 
-## Output
-#### 1) table1.json = positions of all regions in sequential order along the fiber trace 
-               - one object {} is one region (either forkOpen, replication, forkClose, unreplicated)
-               - one index each for start and end
-               - array indices for locations of protein 1 and 2
-               - e.g. of one object: 
-                {
-                    "Region": "Replicated",
-                    "Start": 100,
-                    "End": 111,
-                    "Protein1": "[  ]", 
-                    "Protein2": "[ 101,102,103,104,110,111 ]"
-                },
- 
-#### 2) table2.json = summarizes percent of protein amount across regions (percents add up to a 100)
-               - one object is one region (either fork, replicated unreplicated)
-               - total size in pixels, percents of protein 1 and protein 2
-               - e.g of one object:
-                {
-                    "Size": 466,
-                    "Prot1Percents": 44.4444,
-                    "Prot2Percents": 46.8208,
-                    "_row": "Tracts"
-                },
- 
- 
-### Update log:
-* oddblobs6, functions4 (latest, Nov 6, 2020) - added annotations, removed unnecessary code<br /> 
-* oddblobs5 - differentiates between data files with protein data and those without using a flag "prot_exists"<br />
+---
 
-![](README_visual.pdf?raw=true)
+# Credits
+
+Conceptualized by:
+**Dr. Sarah Sabatinos and Marc Green**
+
+Published in: Sabatinos, S. A., & Green, M. D. (2018). *A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast.* In **Genome Instability** (pp. 509-526)
+
+Implemented in **R** by:
+**Kazeera Aliar and Kerenza Cheng**
+
+---
+# Methods of Running ODD-BLOBS
+
+## Method 1 — RShiny Visualization App (Recommended)
+
+An interactive **RShiny application** is included in this repository for running ODD-BLOBS and visualizing fiber data.
+
+The Shiny interface allows users to:
+
+- upload fiber intensity tables  
+- map imaging channels (DNA, BrdU, proteins)  
+- adjust analysis thresholds  
+- visualize fibers as stacked heatmaps  
+- summarize protein distribution across replication regions  
+- export figures as PDF  
+
+### Running the Shiny app
+
+
+Launch the app: 
+The interface will open in your browser.
+
+---
+
+### App Interface
+
+#### Tab 1 — Fiber Visualization
+
+Displays stacked intensity tracks for each channel:
+
+* DNA control
+* BrdU (replication signal)
+* Protein 1
+* Protein 2 (optional)
+
+Features:
+
+* zoomable fiber visualization
+* customizable lane labels
+* customizable lane colors
+* channel mapping flexibility
+* export figure as PDF
+
+---
+
+#### Tab 2 — Region Summary
+
+Displays a bar plot summarizing protein localization across fiber regions:
+
+* replicated DNA
+* forks
+* unreplicated DNA
+
+Uses a color-blind friendly **viridis palette**.
+
+---
+
+### User Guide
+
+Detailed instructions for using the Shiny app are available here:
+
+**[ODD-BLOBS Shiny User Guide](USER_GUIDE_ODDBLOBS_SHINY.pdf)**
+
+---
+
+## Method 2 — Running the R Scripts Directly
+
+The original ODD-BLOBS analysis can also be run directly using the R scripts.
+
+This approach produces JSON output files and may be useful for automated analysis pipelines.
+
+---
+
+# Files
+
+### oddblobs_.R
+
+Located in:
+
+```
+scripts/r/
+```
+
+Main script used to:
+
+* read fiber data and user-defined parameters
+* threshold intensity arrays
+* identify replication tracts
+* define fork boundaries
+* detect protein localization
+
+---
+
+### functions_.R
+
+Contains helper functions used to process and reformat data during the analysis pipeline.
+
+---
+
+# Input
+
+## Fiber data table (.txt)
+
+Input files contain fluorescence intensity arrays measured along chromatin fibers.
+
+Each channel represents intensity along a single fiber.
+
+Typical columns include:
+
+```
+Channel 1
+Channel 2
+Channel 3
+Channel 4
+X (pixel)
+Y (pixel)
+X (microns)
+Y (microns)
+```
+
+Only the **Channel columns** are used by ODD-BLOBS.
+
+---
+
+## Command-line arguments
+
+The original script requires eight parameters:
+
+1. experiment name
+2. file name
+3. tract threshold
+4. protein 1 threshold
+5. protein 2 threshold
+6. fork pixels into replicated region (pR)
+7. fork pixels into unreplicated region (pU)
+8. smoothing parameter (close gaps ≤ X pixels)
+
+---
+
+# Output
+
+## table1.json
+
+Contains sequential regions along the fiber trace.
+
+Each object corresponds to a region:
+
+* forkOpen
+* replicated
+* forkClose
+* unreplicated
+
+Example:
+
+```
+{
+  "Region": "Replicated",
+  "Start": 100,
+  "End": 111,
+  "Protein1": "[ ]",
+  "Protein2": "[101,102,103,104,110,111]"
+}
+```
+
+---
+
+## table2.json
+
+Summarizes protein distribution across region types.
+
+Example:
+
+```
+{
+  "Size": 466,
+  "Prot1Percents": 44.44,
+  "Prot2Percents": 46.82,
+  "_row": "Tracts"
+}
+```
+
+---
+
+# Dependencies
+
+R ≥ 3.4.4
+Required R packages:
+
+```
+jsonlite
+shiny
+ggplot2
+dplyr
+tidyr
+bslib
+viridis
+```
+
+---
+
+# Recommendation
+
+For most users, the **RShiny interface is the preferred way to run ODD-BLOBS**, as it provides:
+
+* interactive visualization
+* easier parameter tuning
+* direct figure export for publication.
