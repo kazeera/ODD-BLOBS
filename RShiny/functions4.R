@@ -1,6 +1,10 @@
 #' Functions for oddblobs_.R
 #' Last updated: Nov 06, 2020 by Kazeera Aliar
-
+# ---- Constants expected by functions4.R ----
+OFF <- 0L
+ON  <- 1L
+FORK_OPEN  <- 2L
+FORK_CLOSE <- 3L
 #' Assigns 1 if intensity is greater or equal to threshold and 0 if it is less
 #' @param x A numeric vector.
 #' @param threshold A number.

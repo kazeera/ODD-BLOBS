@@ -1,5 +1,6 @@
-# app.R ---- ODD-BLOBS Shiny visualizer (flex channel mapping, autorun, PDF export) ----
+# app.R ODD-BLOBS Shiny visualizer (wiith flexible channel mapping, autorun, PDF export)
 
+# Load packages
 library(shiny)
 library(ggplot2)
 library(dplyr)
@@ -8,16 +9,33 @@ library(grDevices)
 library(bslib)
 library(viridisLite)
 
-# ---- Constants expected by functions4.R ----
-OFF <- 0L
-ON  <- 1L
-FORK_OPEN  <- 2L
-FORK_CLOSE <- 3L
+# # Constants expected by functions4.R --> KA moved to functions file
+# OFF <- 0L
+# ON  <- 1L
+# FORK_OPEN  <- 2L
+# FORK_CLOSE <- 3L
 
-# ---- Source ODD-BLOBS functions ----
-source("functions4.R")
+# Read ODD-BLOBS functions from other script
+source( "functions4.R")
 
-# ---- Robust-ish reader (handles UTF-16LE, incomplete final line) ----
+# Override find_tracts() - to account for error if no tracts are found
+find_tracts <- function(array) {
+  array <- as.integer(array)
+  on_idx <- which(array == ON)
+
+  # No replicated pixels detected
+  if (length(on_idx) == 0) {
+    return(data.frame(Tract.No. = integer(0),Starts.At = integer(0), Ends.At= integer(0), Length = integer(0)))
+  }
+  breaks <- which(diff(on_idx) > 1)
+  starts <- c(on_idx[1], on_idx[breaks + 1])
+  ends   <- c(on_idx[breaks], on_idx[length(on_idx)])
+  lens   <- ends - starts + 1
+
+  data.frame(Tract.No. = seq_along(starts), Starts.At = starts, Ends.At= ends,Length = lens)
+}
+
+# Function for reader (handles UTF-16LE, incomplete final line)
 read_fiber_table <- function(path) {
   raw4 <- readBin(path, "raw", n = 4)
   is_utf16le <- length(raw4) >= 2 && raw4[1] == as.raw(0xFF) && raw4[2] == as.raw(0xFE)
@@ -25,14 +43,8 @@ read_fiber_table <- function(path) {
   
   df <- suppressWarnings(
     tryCatch(
-      read.table(
-        path,
-        sep = "\t",
-        header = TRUE,
-        fileEncoding = enc,
-        fill = TRUE,
-        comment.char = "",
-        check.names = FALSE
+      read.table(path, sep = "\t", header = TRUE, fileEncoding = enc,
+                  fill = TRUE, comment.char = "", check.names = FALSE
       ),
       error = function(e) NULL
     )
@@ -40,22 +52,14 @@ read_fiber_table <- function(path) {
   
   if (is.null(df) || ncol(df) < 2) {
     df <- suppressWarnings(
-      read.table(
-        path,
-        sep = "\t",
-        header = TRUE,
-        fill = TRUE,
-        comment.char = "",
-        check.names = FALSE
-      )
+      read.table(path, sep = "\t", header = TRUE, fill =TRUE, comment.char = "", check.names = FALSE)
     )
   }
-  
   df
 }
 
-# ---- Fix: some versions of get_prot_percents count FORK_OPEN twice ----
-get_prot_percents_fixed <- function(prot_array, tract_array) {
+# Function for get_prot_percents - handles counting FORK_OPEN twice
+get_prot_percents <- function(prot_array, tract_array) {
   prot_in_tracts <- count_matches(prot_array, tract_array, ON)
   prot_in_forks  <- count_matches(prot_array, tract_array, FORK_OPEN) +
     count_matches(prot_array, tract_array, FORK_CLOSE)
@@ -67,8 +71,7 @@ get_prot_percents_fixed <- function(prot_array, tract_array) {
   prot_counts * 100 / prot_counts[4]
 }
 
-
-# ---- Helper: normalize hex color strings ----
+# Helper functions: normalize hex color strings
 normalize_hex <- function(x, default) {
   if (is.null(x) || is.na(x)) return(default)
   x <- trimws(x)
@@ -77,7 +80,7 @@ normalize_hex <- function(x, default) {
   default
 }
 
-# ---- Runner: uses user-chosen mapping for DNA/BrdU/Prot1/Prot2 ----
+# Run oddblobs: uses user-chosen mapping for DNA/BrdU/Prot1/Prot2
 run_oddblobs_with_mapping <- function(df,
                                       dna_idx, brdu_idx, p1_idx, p2_idx,
                                       brdu_thres, p1_thres, p2_thres,
@@ -116,18 +119,22 @@ run_oddblobs_with_mapping <- function(df,
   tract_array2 <- smooth_it(tract_array1, smooth_val)
   
   tracts_df <- find_tracts(tract_array2)
-  tract_starts  <- tracts_df[["Starts.At"]]
-  tract_ends    <- tracts_df[["Ends.At"]]
-  tract_lengths <- tracts_df[["Length"]]
+
+  # If no tracts, keep tract array as-is (all OFF) and proceed
+  if (nrow(tracts_df) == 0) {
+    tract_array3 <- tract_array2
+  } else {
+    tract_starts  <- tracts_df[["Starts.At"]]
+    tract_ends    <- tracts_df[["Ends.At"]]
+    tract_lengths <- tracts_df[["Length"]]
+
+    tract_array3 <- add_forks(tract_array2,tract_starts, tract_ends, tract_lengths, pU, pR, length(tract_array2))
   
-  tract_array3 <- add_forks(
-    tract_array2,
-    tract_starts, tract_ends, tract_lengths,
-    pU, pR,
-    length(tract_array2)
-  )
-  
+  }
+
   table1 <- find_regions(tract_array3)
+  table1$Start <- as.integer(table1$Start)
+  table1$End   <- as.integer(table1$End)
   
   # Proteins
   p1_bin <- smooth_it(threshold_array(p1, p1_thres), smooth_val)
@@ -139,7 +146,7 @@ run_oddblobs_with_mapping <- function(df,
   table2 <- get_region_sizes(tract_array3)
   table2 <- cbind(
     table2,
-    Prot1Percent = get_prot_percents_fixed(p1_bin, tract_array3)
+    Prot1Percent = get_prot_percents(p1_bin, tract_array3)
   )
   
   if (has_p2) {
@@ -158,8 +165,8 @@ run_oddblobs_with_mapping <- function(df,
     
     table2 <- cbind(
       table2,
-      Prot2Percent = get_prot_percents_fixed(p2_bin, tract_array3),
-      ColocalizationPercent = get_prot_percents_fixed(coloc, tract_array3)
+      Prot2Percent = get_prot_percents(p2_bin, tract_array3),
+      ColocalizationPercent = get_prot_percents(coloc, tract_array3)
     )
   }
   
@@ -176,7 +183,7 @@ run_oddblobs_with_mapping <- function(df,
   )
 }
 
-# ---- Tab 1 data: lane-colored alpha, 0 => white ----
+# Tab 1 data: lane-colored alpha, 0 => white
 fiber_plot_df_alpha <- function(raw, has_prot2,
                                dna_thres, brdu_thres, p1_thres, p2_thres,
                                label_dna, label_brdu, label_p1, label_p2,
@@ -251,6 +258,11 @@ plot_table2_bars <- function(table2) {
 
 ui <- fluidPage(
   theme = bslib::bs_theme(version = 5),
+  tags$style(HTML("
+  .card-body, .accordion-body { font-size: 13px; }
+  .form-control, .form-select, .btn { font-size: 13px; }
+  .shiny-input-container { margin-bottom: 10px; }
+  ")),
   uiOutput("app_title"),
   
   fluidRow(
@@ -258,8 +270,12 @@ ui <- fluidPage(
       4,
       bslib::card(
         bslib::card_body(
-          textInput("expt", "Experiment name", value = "MyExperiment"),
-          fileInput("fiberfile", "Upload fiber .txt", accept = c(".txt", ".tsv", ".tab")),
+textInput("expt", "Experiment name", value = "MyExperiment"),
+          tags$div(
+            style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;",
+            actionButton("load_example1", "Load Example Fiber (4 channels)", class="btn btn-outline-primary btn-sm")          ),
+          tags$div(style="margin:8px 0; color:#666; font-size:12px;", "— OR —"),
+          fileInput("fiberfile", "Upload a fiber .txt", accept = c(".txt", ".tsv", ".tab")),
           verbatimTextOutput("detected_channels", placeholder = TRUE),
           
           bslib::accordion(
@@ -268,22 +284,19 @@ ui <- fluidPage(
               numericInput("brdu_thres", "BrdU threshold (tract calling)", value = 200, min = 0),
               numericInput("p1_thres", "Protein 1 threshold", value = 200, min = 0),
               numericInput("p2_thres", "Protein 2 threshold", value = 200, min = 0)
-            ),
-            bslib::accordion_panel("Thresholds (display)",
+            ,
+              tags$div(style="margin-top:8px; font-size:12px; color:#666;", "Display-only (does not affect tract calling):"),
               numericInput("dna_thres_disp", "DNA display threshold", value = 0, min = 0)
             ),
-            bslib::accordion_panel("Fork + smoothing",
+bslib::accordion_panel("Fork + smoothing",
               numericInput("pR", "Fork pixels into replicated region (pR)", value = 10, min = 0),
               numericInput("pU", "Fork pixels into unreplicated region (pU)", value = 10, min = 0),
               numericInput("smooth", "Smooth it (close gaps <= this many pixels)", value = 0, min = 0)
             ),
             bslib::accordion_panel("Tab 1 edits",
-              textInput("col_dna",  "DNA color (hex)", value = "#1f77b4"),
-              textInput("col_brdu", "BrdU color (hex)", value = "#2ca02c"),
-              textInput("col_p1",   "Protein 1 color (hex)", value = "#d62728"),
-              textInput("col_p2",   "Protein 2 color (hex)", value = "#ff7f0e"),
+              actionButton("define_colors", "Define colors", class="btn btn-outline-secondary btn-sm"),
               uiOutput("color_swatches"),
-              actionButton("rename_lanes", "Rename lanes"),
+              actionButton("rename_lanes", "Rename lanes", class="btn btn-outline-secondary btn-sm"),
               helpText("These settings affect Tab 1 only.")
             ),
             bslib::accordion_panel("Export",
@@ -295,10 +308,17 @@ ui <- fluidPage(
 
           # Keep lane label values in hidden inputs; edited via modal dialog
           tags$div(style="display:none;",
+            # Lane labels (edited via modal)
             textInput("label_dna",  "DNA lane label", value = "DNA"),
             textInput("label_brdu", "BrdU lane label", value = "BrdU"),
             textInput("label_p1",   "Protein 1 lane label", value = "Protein 1"),
-            textInput("label_p2",   "Protein 2 lane label", value = "Protein 2")
+            textInput("label_p2",   "Protein 2 lane label", value = "Protein 2"),
+
+            # Tab 1 lane colors (edited via modal)
+            textInput("col_dna",  "DNA color (hex)", value = "#1f77b4"),
+            textInput("col_brdu", "BrdU color (hex)", value = "#2ca02c"),
+            textInput("col_p1",   "Protein 1 color (hex)", value = "#d62728"),
+            textInput("col_p2",   "Protein 2 color (hex)", value = "#ff7f0e")
           )
 
         )
@@ -320,15 +340,15 @@ ui <- fluidPage(
             uiOutput("fiber_plot_ui")
           ),
           br(),
-          h4("table1 (first 25 rows)"),
-          tableOutput("table1_head")
+          h4("Pixel positions of proteins within forks, replicated, unreplicated regions:"),
+          tags$div(style="font-size:11px; max-height:450px; overflow:auto;", tableOutput("table1_head"))
         ),
         tabPanel(
           "Tab 2: Region summary",
           br(),
           plotOutput("table2_plot", height = "450px"),
           br(),
-          h4("table2"),
+          h4("Summary of Protein 1 and 2 within replicated, unreplicated, and fork regions:"),
           tableOutput("table2_out")
         )
       )
@@ -349,6 +369,40 @@ server <- function(input, output, session) {
     df <- read_fiber_table(input$fiberfile$datapath)
     fiber_df(df)
   })
+
+  # Load bundled examples (place files under ./examples/)
+  find_example_path <- function(candidates) {
+    for (p in candidates) {
+      if (file.exists(p)) return(p)
+    }
+    return(NULL)
+  }
+
+  observeEvent(input$load_example1, {
+    p <- find_example_path(c(
+      file.path("examples", "fiber_example_4ch.txt"),
+      "fiber (1).txt",
+      "fiber1.txt"
+    ))
+
+    if (is.null(p)) {
+      showNotification("Example (4 channels) not found. Add examples/fiber_example_4ch.txt (recommended).", type = "error")
+      return()
+    }
+
+    df <- read_fiber_table(p)
+    fiber_df(df)
+
+    # defaults for 4ch
+    updateSelectInput(session, "dna_idx",  selected = 1)
+    updateSelectInput(session, "p1_idx",   selected = 2)
+    updateSelectInput(session, "brdu_idx", selected = 3)
+    updateSelectInput(session, "p2_idx",   selected = 4)
+
+    showNotification(paste("Loaded example:", basename(p)), type = "message")
+  })
+
+
   
   output$mapping_ui <- renderUI({
     df <- fiber_df()
@@ -396,7 +450,51 @@ server <- function(input, output, session) {
     )
   })
 
-  observeEvent(input$rename_lanes, {
+  
+  observeEvent(input$define_colors, {
+    showModal(modalDialog(
+      title = "Define lane colors (Tab 1)",
+      textInput("col_dna_modal",  "DNA color (hex)",  value = input$col_dna  %||% "#1f77b4"),
+      textInput("col_brdu_modal", "BrdU color (hex)", value = input$col_brdu %||% "#2ca02c"),
+      textInput("col_p1_modal",   "Protein 1 color (hex)", value = input$col_p1 %||% "#d62728"),
+      textInput("col_p2_modal",   "Protein 2 color (hex)", value = input$col_p2 %||% "#ff7f0e"),
+      uiOutput("modal_color_swatches"),
+      footer = tagList(
+        actionButton("save_lane_colors", "Save", class = "btn-primary"),
+        modalButton("Cancel")
+      ),
+      easyClose = TRUE
+    ))
+  })
+
+  output$modal_color_swatches <- renderUI({
+    swatch <- function(col) {
+      tags$div(style = paste0("width:18px;height:18px;display:inline-block;border:1px solid #ccc;background:", col, ";"))
+    }
+    col_dna  <- normalize_hex(input$col_dna_modal,  "#1f77b4")
+    col_brdu <- normalize_hex(input$col_brdu_modal, "#2ca02c")
+    col_p1   <- normalize_hex(input$col_p1_modal,   "#d62728")
+    col_p2   <- normalize_hex(input$col_p2_modal,   "#ff7f0e")
+
+    tags$div(
+      style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:6px;",
+      tags$span("Preview:"),
+      swatch(col_dna),  tags$span(style="font-size:12px;", "DNA"),
+      swatch(col_brdu), tags$span(style="font-size:12px;", "BrdU"),
+      swatch(col_p1),   tags$span(style="font-size:12px;", "Prot1"),
+      swatch(col_p2),   tags$span(style="font-size:12px;", "Prot2")
+    )
+  })
+
+  observeEvent(input$save_lane_colors, {
+    updateTextInput(session, "col_dna",  value = input$col_dna_modal)
+    updateTextInput(session, "col_brdu", value = input$col_brdu_modal)
+    updateTextInput(session, "col_p1",   value = input$col_p1_modal)
+    updateTextInput(session, "col_p2",   value = input$col_p2_modal)
+    removeModal()
+  })
+
+observeEvent(input$rename_lanes, {
     showModal(modalDialog(
       title = "Rename lanes (Tab 1)",
       textInput("label_dna_modal",  "DNA lane label",  value = input$label_dna  %||% "DNA"),
@@ -419,7 +517,7 @@ server <- function(input, output, session) {
     removeModal()
   })
 
-# ---- AUTO-RUN: recompute whenever inputs change ----
+# AUTO-RUN: recompute whenever inputs change
   results <- reactive({
     df <- fiber_df()
     req(df)
@@ -476,7 +574,7 @@ server <- function(input, output, session) {
   output$table1_head <- renderTable({
     res <- results()
     req(res)
-    head(res$table1, 25)
+    res$table1
   })
   
   output$table2_plot <- renderPlot({
@@ -491,7 +589,7 @@ server <- function(input, output, session) {
     res$table2
   })
   
-  # ---- Download PDF of Tab 1 ----
+  # Download PDF of Tab 1
   output$download_pdf_tab1 <- downloadHandler(
     filename = function() {
       paste0(input$expt, "_fiber_plot.pdf")
