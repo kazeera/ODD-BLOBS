@@ -5,7 +5,7 @@ account: kazeera
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 16820273
-bundleId: 11664743
+bundleId: 11664948
 url: https://kazeera.shinyapps.io/R-ODD-BLOBS/
 version: 1
 asMultiple: FALSE

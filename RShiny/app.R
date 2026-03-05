@@ -263,14 +263,18 @@ ui <- fluidPage(
   .form-control, .form-select, .btn { font-size: 13px; }
   .shiny-input-container { margin-bottom: 10px; }
   ")),
-  uiOutput("app_title"),
+  # uiOutput("app_title"),
+  div(
+    # style = "text-align:center;",
+    h2("R-ODD-BLOBS")
+  ),
   
   fluidRow(
     column(
       4,
       bslib::card(
         bslib::card_body(
-textInput("expt", "Experiment name", value = "MyExperiment"),
+textInput("expt", "Experiment name", value = "My_Experiment"),
           tags$div(
             style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;",
             actionButton("load_example1", "Load Example Fiber (4 channels)", class="btn btn-outline-primary btn-sm")          ),
@@ -358,9 +362,9 @@ bslib::accordion_panel("Fork + smoothing",
 
 server <- function(input, output, session) {
   
-  output$app_title <- renderUI({
-    titlePanel(if (!is.null(input$expt) && nzchar(input$expt)) input$expt else "ODD-BLOBS Fiber Visualizer")
-  })
+  # output$app_title <- renderUI({
+  #   titlePanel(if (!is.null(input$expt) && nzchar(input$expt)) input$expt else "ODD-BLOBS Fiber Visualizer")
+  # })
   
   fiber_df <- reactiveVal(NULL)
   
