@@ -10,7 +10,15 @@ ODD-BLOBS analyzes chromatin fiber intensity data to identify:
 - unreplicated DNA  
 - protein localization and co-localization along the fiber  
 
-This enables modeling of replication structures and protein behavior along individual DNA fibers.
+> Purpose: enables modelling of replication structures and protein behavior along individual DNA fibers.
+
+### Quick Link: 
+- Run the web application here: <https://kazeera.shinyapps.io/R-ODD-BLOBS/>. Or copy and paste the following into the search bar:
+```
+https://kazeera.shinyapps.io/R-ODD-BLOBS
+```
+
+# Visual Pipeline
 
 <img src="visual description/3_Qualitative To Quantitative.JPG?raw=true" width="600"></img>
 <img src="visual description/4_ODD-BLOBS_Logic.JPG?raw=true" width="600"></img>
@@ -29,9 +37,9 @@ Implemented in **R** by:
 **Kazeera Aliar and Kerenza Cheng**
 
 ---
-# Methods of Running ODD-BLOBS
+# Methods of Running R-ODD-BLOBS
 
-## Method 1 — RShiny Visualization App (Recommended)
+## Method 1: RShiny Visualization App (Recommended)
 
 An interactive **RShiny application** is included in this repository for running ODD-BLOBS and visualizing fiber data.
 
@@ -47,14 +55,30 @@ The Shiny interface allows users to:
 ### Running the Shiny app
 
 
-Launch the app: 
+Launch the web app: <https://kazeera.shinyapps.io/R-ODD-BLOBS/>. Or copy and paste the following into the search bar:
+```
+https://kazeera.shinyapps.io/R-ODD-BLOBS
+```
 The interface will open in your browser.
 
 ---
 
 ### App Interface
 
-#### Tab 1 — Fiber Visualization
+
+## Left Side - User Inputs
+
+The left panel allows user to upload fiber data, define channel mappings, and adjust analysis parameters used by ODD-BLOBS.
+
+<img src="RShiny/gui/RShiny_leftpanel_1.svg" width="800">
+
+<img src="RShiny/gui/RShiny_leftpanel_2.svg" width="800">
+
+---
+
+## Right Side - Visualization
+
+#### Tab 1: Fiber Visualization
 
 Displays stacked intensity tracks for each channel:
 
@@ -71,9 +95,11 @@ Features:
 * channel mapping flexibility
 * export figure as PDF
 
+<img src="RShiny/gui/RShiny_mainpanel_tab1.svg" width="900">
+
 ---
 
-#### Tab 2 — Region Summary
+#### Tab 2: Region Summary
 
 Displays a bar plot summarizing protein localization across fiber regions:
 
@@ -83,6 +109,7 @@ Displays a bar plot summarizing protein localization across fiber regions:
 
 Uses a color-blind friendly **viridis palette**.
 
+<img src="RShiny/gui/RShiny_mainpanel_tab2.svg" width="900">
 ---
 
 ### User Guide
@@ -93,7 +120,7 @@ Detailed instructions for using the Shiny app are available here:
 
 ---
 
-## Method 2 — Running the R Scripts Directly
+## Method 2: Running the R Scripts Directly
 
 The original ODD-BLOBS analysis can also be run directly using the R scripts.
 
