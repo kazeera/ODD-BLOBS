@@ -1,28 +1,25 @@
 # R-ODD-BLOBS
 ### (One Dimensional Data – Boolean Logic Binning System)
 
-ODD-BLOBS is a pipeline for modeling DNA replication structures using quantitative chromatin fiber data.
-During DNA replication, the **replication fork** forms at the boundary between replicated and unreplicated DNA. While fork activity has traditionally been inferred using genetic, molecular, and sequencing approaches, these methods do not directly visualize fork structure along individual chromatin fibers.
-ODD-BLOBS analyzes chromatin fiber intensity data to identify:
+
+
+ODD-BLOBS is a pipeline for modelling DNA replication structures using quantitative chromatin fiber data.
+During DNA replication, the **replication fork** forms at the boundary between replicated and unreplicated DNA. While fork activity has traditionally been inferred using genetic, molecular and sequencing approaches, these methods do not directly visualize fork structure along individual chromatin fibers.
+
+Thus, we developed ODD-BLOBS to analyze chromatin fiber intensity data to identify:
 
 - replicated DNA regions  
 - replication forks  
 - unreplicated DNA  
 - protein localization and co-localization along the fiber  
 
-> Purpose: enables modelling of replication structures and protein behavior along individual DNA fibers.
-
 ### Quick Link: 
+> Purpose: enables modelling of replication structures/protein behaviour along individual DNA fibres
 - Run the web application here: <https://kazeera.shinyapps.io/R-ODD-BLOBS/>. Or copy and paste the following into the search bar:
 ```
 https://kazeera.shinyapps.io/R-ODD-BLOBS
 ```
 
-# Visual Pipeline
-
-<img src="visual description/3_Qualitative To Quantitative.JPG?raw=true" width="600"></img>
-<img src="visual description/4_ODD-BLOBS_Logic.JPG?raw=true" width="600"></img>
-<img src="visual description/8_Application.JPG?raw=true" width="600"></img>
 
 ---
 
@@ -31,19 +28,26 @@ https://kazeera.shinyapps.io/R-ODD-BLOBS
 Conceptualized by:
 **Dr. Sarah Sabatinos and Marc Green**
 
-Published in: Sabatinos, S. A., & Green, M. D. (2018). *A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast.* In **Genome Instability** (pp. 509-526)
+See: Sabatinos, S. A., & Green, M. D. (2018). *A Chromatin Fiber Analysis Pipeline to Model DNA Synthesis and Structures in Fission Yeast.* In **Genome Instability** (pp. 509-526)
 
 Implemented in **R** by:
 **Kazeera Aliar and Kerenza Cheng**
 
+Preprint on biorxiv, see <https://www.biorxiv.org/content/10.1101/2024.11.01.621594v2>
+
+
+# Visual Pipeline
+
+<img src="visual description/3_Qualitative To Quantitative.JPG?raw=true" width="600"></img>
+<img src="visual description/4_ODD-BLOBS_Logic.JPG?raw=true" width="600"></img>
 ---
 # Methods of Running R-ODD-BLOBS
 
 ## Method 1: RShiny Visualization App (Recommended)
 
-An interactive **RShiny application** is included in this repository for running ODD-BLOBS and visualizing fiber data.
+An interactive application is included in this repo to run ODD-BLOBS and visualize fiber data.
 
-The Shiny interface allows users to:
+The interface allows users to do the following:
 
 - upload fiber intensity tables  
 - map imaging channels (DNA, BrdU, proteins)  
@@ -59,16 +63,16 @@ Launch the web app: <https://kazeera.shinyapps.io/R-ODD-BLOBS/>. Or copy and pas
 ```
 https://kazeera.shinyapps.io/R-ODD-BLOBS
 ```
-The interface will open in your browser.
+And the interface opens in your browser.
 
 ---
 
 ### App Interface
 
 
-## Left Side - User Inputs
+## Left Panel - User Inputs
 
-The left panel allows user to upload fiber data, define channel mappings, and adjust analysis parameters used by ODD-BLOBS.
+The left panel allows user to upload fiber data, define channel mappings and adjust analysis parameters used by ODD-BLOBS.
 
 <img src="RShiny/gui/RShiny_leftpanel_1.svg" width="800">
 
@@ -80,7 +84,7 @@ The left panel allows user to upload fiber data, define channel mappings, and ad
 
 #### Tab 1: Fiber Visualization
 
-Displays stacked intensity tracks for each channel:
+> Displays stacked intensity tracks for each channel:
 
 * DNA control
 * BrdU (replication signal)
@@ -101,7 +105,7 @@ Features:
 
 #### Tab 2: Region Summary
 
-Displays a bar plot summarizing protein localization across fiber regions:
+> Displays a bar plot summarizing protein localization across fibre regions:
 
 * replicated DNA
 * forks
@@ -110,9 +114,11 @@ Displays a bar plot summarizing protein localization across fiber regions:
 Uses a color-blind friendly **viridis palette**.
 
 <img src="RShiny/gui/RShiny_mainpanel_tab2.svg" width="900">
+
+<img src="visual description/8_Application.JPG?raw=true" width="600"></img>
 ---
 
-### User Guide
+### User Guide [todo]
 
 Detailed instructions for using the Shiny app are available here:
 
@@ -158,9 +164,7 @@ Contains helper functions used to process and reformat data during the analysis 
 
 ## Fiber data table (.txt)
 
-Input files contain fluorescence intensity arrays measured along chromatin fibers.
-
-Each channel represents intensity along a single fiber.
+Input files contain fluorescence intensity arrays measured along chromatin fibers. Each channel represents an intensity along a single fiber.
 
 Typical columns include:
 
@@ -252,13 +256,3 @@ tidyr
 bslib
 viridis
 ```
-
----
-
-# Recommendation
-
-For most users, the **RShiny interface is the preferred way to run ODD-BLOBS**, as it provides:
-
-* interactive visualization
-* easier parameter tuning
-* direct figure export for publication.
