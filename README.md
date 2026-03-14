@@ -90,7 +90,7 @@ Displays stacked intensity tracks for each channel/column:
 Features:
 
 * zoomable fiber visualization, x axis=pixel position
-* customizable lane labels and colors
+* customizable lane labels and colours
 * changing channel mapping 
 
 <img src="RShiny/gui/RShiny_mainpanel_tab1.svg" width="900">
@@ -105,7 +105,7 @@ Displays bar plot summarizing protein localization across fibre regions:
 * forks
 * unreplicated DNA
 
-Uses a color-blind friendly **viridis palette**.
+Uses a colour-blind friendly **viridis palette**.
 
 <img src="RShiny/gui/RShiny_mainpanel_tab2.svg" width="900">
 
